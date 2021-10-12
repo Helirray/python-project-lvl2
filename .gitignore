@@ -2,7 +2,7 @@
 __pycache__/
 .idea/
 dist/
-scetchbook.py
+activate
 */.coverage
 .coverage
 coverage.xml
