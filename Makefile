@@ -1,7 +1,21 @@
 install:
 	poetry install
 
-build:
+test:
+	poetry run pytest gendiff tests
+
+test-coverage:
+	poetry run pytest --cov=gendiff --cov-report xml tests
+
+lint:
+	poetry run flake8 gendiff
+
+selfcheck:
+	poetry check
+
+check: selfcheck test lint
+
+build: check
 	poetry build
 
 publish:
