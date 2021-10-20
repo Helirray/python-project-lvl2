@@ -1,17 +1,28 @@
-name: GitHub Actions Demo
-on: [push]
+name: test
+
+on:
+  - push
+  - pull_request
+
 jobs:
-  Explore-GitHub-Actions:
+  test-coverage:
     runs-on: ubuntu-latest
     steps:
-      - run: echo "🎉 The job was automatically triggered by a ${{ github.event_name }} event."
-      - run: echo "🐧 This job is now running on a ${{ runner.os }} server hosted by GitHub!"
-      - run: echo "🔎 The name of your branch is ${{ github.ref }} and your repository is ${{ github.repository }}."
-      - name: Check out repository code
-        uses: actions/checkout@v2
-      - run: echo "💡 The ${{ github.repository }} repository has been cloned to the runner."
-      - run: echo "🖥️ The workflow is now ready to test your code on the runner."
-      - name: List files in the repository
+      - uses: actions/checkout@v2
+      - name: Set up Python 3.8.5
+        uses: actions/setup-python@v2
+        with:
+          python-version: 3.8.5
+      - name: Install dependencies
         run: |
-          ls ${{ github.workspace }}
-      - run: echo "🍏 This job's status is ${{ job.status }}."
+          pip install poetry
+          poetry install
+      - name: Run linter and pytest
+        run: |
+          make check
+      - name: Test & publish code coverage
+        uses: paambaati/codeclimate-action@v2.7.5
+        env:
+          CC_TEST_REPORTER_ID: a08c059bed58b7b318b4a59329e1a0f1dc70948a652180160e59d22366bf7913
+        with:
+          coverageCommand: make test-coverage
