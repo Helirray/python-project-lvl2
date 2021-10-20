@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 import argparse
-from gendiff import generate_diff
+from gendiff.modules import gendiff
 
 
 def main():
@@ -16,7 +16,7 @@ def main():
         help='set format of output'
     )
     args = parser.parse_args()
-    print(generate_diff.generate_diff(args.first_file, args.second_file))
+    print(gendiff.generate_diff(args.first_file, args.second_file))
 
 
 if __name__ == '__main__':
