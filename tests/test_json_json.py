@@ -3,7 +3,7 @@ from gendiff.modules.gendiff import generate_diff
 
 def test_gendiff():
     json1 = "tests/fixtures/json1.json"
-    json2 = "tests/fixtures/yaml2.yml"
+    json2 = "tests/fixtures/json2.json"
     right_answer = """{
   - follow: false
     host: hexlet.io
