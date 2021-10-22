@@ -1,5 +1,5 @@
 ### Hexlet tests and linter status:
-[![test](https://github.com/Helirray/python-project-lvl2/actions/workflows/github-actions-demo.yml/badge.svg)](https://github.com/Helirray/python-project-lvl2/actions/workflows/github-actions-demo.yml)
+
 [![test](https://github.com/Helirray/python-project-lvl2/actions/workflows/github-actions-demo.yml/badge.svg)](https://github.com/Helirray/python-project-lvl2/actions/workflows/github-actions-demo.yml)
 [![Maintainability](https://api.codeclimate.com/v1/badges/9f152df646c4777abc9a/maintainability)](https://codeclimate.com/github/Helirray/python-project-lvl2/maintainability)
 <a href="https://codeclimate.com/github/Helirray/python-project-lvl2/test_coverage"><img src="https://api.codeclimate.com/v1/badges/9f152df646c4777abc9a/test_coverage" /></a>
