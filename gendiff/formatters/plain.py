@@ -1,3 +1,6 @@
+"""Module of rendering to plain format function."""
+
+
 def convert(value):
     if value is None:
         return 'null'
@@ -5,6 +8,8 @@ def convert(value):
         return 'true' if value else 'false'
     elif type(value) is dict:
         value = '[complex value]'
+    elif type(value) is int:
+        value = value
     else:
         value = "'{}'".format(value)
     return value
