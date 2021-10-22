@@ -1,5 +1,6 @@
 ### Hexlet tests and linter status:
 [![Actions Status](https://github.com/Helirray/python-project-lvl2/workflows/hexlet-check/badge.svg)](https://github.com/Helirray/python-project-lvl2/actions)
+[![test](https://github.com/Helirray/python-project-lvl2/actions/workflows/github-actions-demo.yml/badge.svg)](https://github.com/Helirray/python-project-lvl2/actions/workflows/github-actions-demo.yml)
 
 json json flat:
 
